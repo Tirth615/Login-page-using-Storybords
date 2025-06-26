@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C05BED7BBBB52A2DFF1E2872 /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75914DE5D0C442392BB0E858 /* Pods_Login.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		4B92B6EE06849E645B81E41C /* Pods-Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.release.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.release.xcconfig"; sourceTree = "<group>"; };
+		75914DE5D0C442392BB0E858 /* Pods_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACA73C39C449E6B7268FA71A /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
 		AF3A7C9B2D2D366B00B0AC87 /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,17 +43,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C05BED7BBBB52A2DFF1E2872 /* Pods_Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A12FF437CBA8DBAF6099FC40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACA73C39C449E6B7268FA71A /* Pods-Login.debug.xcconfig */,
+				4B92B6EE06849E645B81E41C /* Pods-Login.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AF3A7C922D2D366B00B0AC87 = {
 			isa = PBXGroup;
 			children = (
 				AF3A7C9D2D2D366B00B0AC87 /* Login */,
 				AF3A7C9C2D2D366B00B0AC87 /* Products */,
+				A12FF437CBA8DBAF6099FC40 /* Pods */,
+				FC0F669B6FFD15ED89AECEA4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +78,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FC0F669B6FFD15ED89AECEA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75914DE5D0C442392BB0E858 /* Pods_Login.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF3A7CAE2D2D366D00B0AC87 /* Build configuration list for PBXNativeTarget "Login" */;
 			buildPhases = (
+				F0F94F57792DF4210FC6DCEC /* [CP] Check Pods Manifest.lock */,
 				AF3A7C972D2D366B00B0AC87 /* Sources */,
 				AF3A7C982D2D366B00B0AC87 /* Frameworks */,
 				AF3A7C992D2D366B00B0AC87 /* Resources */,
+				3D5925689FB87296B7BF4324 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				AF3A7C9D2D2D366B00B0AC87 /* Login */,
 			);
 			name = Login;
-			packageProductDependencies = (
-			);
 			productName = Login;
 			productReference = AF3A7C9B2D2D366B00B0AC87 /* Login.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +155,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D5925689FB87296B7BF4324 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Login/Pods-Login-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Login/Pods-Login-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Login/Pods-Login-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0F94F57792DF4210FC6DCEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Login-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF3A7C972D2D366B00B0AC87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,11 +210,13 @@
 /* Begin XCBuildConfiguration section */
 		AF3A7CAF2D2D366D00B0AC87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACA73C39C449E6B7268FA71A /* Pods-Login.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BHNZXW67R6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Login/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -167,11 +239,13 @@
 		};
 		AF3A7CB02D2D366D00B0AC87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B92B6EE06849E645B81E41C /* Pods-Login.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BHNZXW67R6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Login/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
